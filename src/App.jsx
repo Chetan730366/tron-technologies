@@ -2,12 +2,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import CategoryPage from "./pages/CategoryPage";
-import ProductDetail from "./pages/ProductDetail";
-import NotFound from "./pages/NotFound";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+import CategoryPage from "./Pages/CategoryPage";
+import ProductDetail from "./Pages/ProductDetail";
+import NotFound from "./Pages/NotFound";
 import { MessageCircle } from "lucide-react";
 
 export default function App() {
