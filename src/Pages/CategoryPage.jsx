@@ -1,7 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { categories, getProductsForCategory } from "../data/categories.js";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../Components/ProductCard";
 import { ChevronRight, Home } from "lucide-react";
 
 export default function CategoryPage() {
