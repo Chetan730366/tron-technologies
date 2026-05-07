@@ -31,11 +31,7 @@ export default function Navbar() {
       <div className="tron-mainbar">
         <div className="tron-mainbar-inner">
           <Link to="/" className="tron-logo" aria-label="Tron Technologies — Home">
-            <img
-              src="/images/logo.png"
-              alt="Tron Technologies"
-              style={{ width: "150px", height: "auto", display: "block" }}
-            />
+            <img src="/images/logo-tron.png" alt="Tron Technologies — Connecting Technology" className="tron-logo-img" />
           </Link>
 
           <nav className="tron-nav">
@@ -51,7 +47,7 @@ export default function Navbar() {
               Contact
             </NavLink>
             <a
-              href="https://wa.me/919315974174"
+              href="https://wa.me/918448773299"
               target="_blank"
               rel="noreferrer"
               className="tron-nav-cta"
@@ -76,7 +72,7 @@ export default function Navbar() {
             <a href="/#why">Why Us</a>
             <a href="/#testimonials">Reviews</a>
             <NavLink to="/contact">Contact</NavLink>
-            <a href="https://wa.me/919315974174" className="wa">WhatsApp Us</a>
+            <a href="https://wa.me/918448773299" className="wa">WhatsApp Us</a>
           </div>
         )}
       </div>
@@ -93,10 +89,7 @@ export default function Navbar() {
                   `tron-catbar-link ${isActive ? "active" : ""}`
                 }
               >
-                <span className="tron-catbar-new">
-                  {cat.name}
-                  {cat.isNew && <span className="tron-catbar-new-badge">New</span>}
-                </span>
+                {cat.name}
               </NavLink>
             ))}
           </div>

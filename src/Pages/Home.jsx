@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Testimonials from "../Components/Testimonials";
 import OfferCarousel from "../Components/OfferCarousel";
-import { categories } from "../data/categories";
+import { categories } from "../data/categories.js";
+
 import {
   ShieldCheck,
   Factory,
@@ -11,9 +12,7 @@ import {
   Headphones,
   Wrench,
   ArrowRight,
-  Cpu,
   Activity,
-  Zap,
 } from "lucide-react";
 
 export default function Home() {
@@ -21,94 +20,96 @@ export default function Home() {
     <main className="bg-white">
       {/* HERO */}
       <section className="relative overflow-hidden bg-slate-950 text-white">
-        <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(244,63,94,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(244,63,94,0.15)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-pink-600/30 blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-fuchsia-600/20 blur-3xl" />
+        <section className="relative overflow-hidden bg-slate-950 text-white">
 
-        <div className="relative max-w-7xl mx-auto px-4 py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-xs font-semibold uppercase tracking-widest text-pink-300">
-              <Activity size={14} className="animate-pulse" /> ✦ since 1982.
-              Made in India
-            </div>
-            <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight">
-              Welcome
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-rose-400 to-fuchsia-400">To</span> Tron Technologies
+          {/* Background Effects */}
+          <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(244,63,94,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(244,63,94,0.15)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
+          <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-pink-600/30 blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-fuchsia-600/20 blur-3xl" />
 
-            </h1>
-            <p className="mt-6 text-lg text-slate-300 max-w-xl leading-relaxed">
-              Quality sewing components and steam irons since 1982.
-              Tron Technologies is a Delhi-based manufacturer and wholesaler specializing in sewing machine spare parts and industrial equipment like steam irons and cutting machines.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                to="/category/bottle-steam-iron"
-                className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 text-white font-bold shadow-xl shadow-pink-500/40 hover:shadow-pink-500/60 transition"
-              >
-                Explore Products
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition" />
-              </Link>
-              <a
-                href="#about"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-bold hover:bg-white/20 transition"
-              >
-                Learn More
-              </a>
-            </div>
-            <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
-              {[
-                { v: "40+", l: "Years Exp" },
-                { v: "5K+", l: "Clients" },
-                { v: "98%", l: "Quality" },
-              ].map((s) => (
-                <div key={s.l}>
-                  <div className="text-3xl md:text-4xl font-black text-white">{s.v}</div>
-                  <div className="text-xs uppercase tracking-widest text-slate-400 mt-1">{s.l}</div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+          {/* GRID */}
+          <div className="relative max-w-7xl mx-auto px-4 py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative"
-          >
-            <div className="relative aspect-square max-w-lg mx-auto">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-full border-2 border-dashed border-pink-500/40"
-              />
-              <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-8 rounded-full border-2 border-dashed border-fuchsia-500/30"
-              />
-              <div className="absolute inset-16 rounded-full bg-gradient-to-br from-pink-600 via-rose-600 to-fuchsia-700 shadow-2xl shadow-pink-500/50 flex items-center justify-center">
-                <div className="absolute inset-4 rounded-full bg-slate-950/40 backdrop-blur border border-white/20 flex items-center justify-center">
-                  <Cpu size={80} className="text-white" />
-                </div>
+            {/* LEFT TEXT */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-xs font-semibold uppercase tracking-widest text-pink-300">
+                <Activity size={14} className="animate-pulse" /> ✦ since 1982. Made in India
               </div>
-              {[
-                { icon: <Factory size={20} />, pos: "top-0 left-1/2 -translate-x-1/2" },
-                { icon: <Wrench size={20} />, pos: "top-1/2 right-0 -translate-y-1/2" },
-                { icon: <Zap size={20} />, pos: "bottom-0 left-1/2 -translate-x-1/2" },
-                { icon: <ShieldCheck size={20} />, pos: "top-1/2 left-0 -translate-y-1/2" },
-              ].map((it, i) => (
-                <motion.div
-                  key={i}
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, delay: i * 0.4 }}
-                  className={`absolute ${it.pos} w-14 h-14 rounded-2xl bg-white text-pink-600 shadow-xl flex items-center justify-center`}
+
+              <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight">
+                Welcome
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-rose-400 to-fuchsia-400">
+                  To
+                </span>{" "}
+                Tron Technologies
+              </h1>
+
+              <p className="mt-6 text-lg text-slate-300 max-w-xl leading-relaxed">
+                Quality sewing components and steam irons since 1982.
+                Tron Technologies is a Delhi-based manufacturer and wholesaler specializing in sewing machine spare parts and industrial equipment like steam irons and cutting machines.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  to="/category/bottle-steam-iron"
+                  className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 text-white font-bold shadow-xl shadow-pink-500/40 hover:shadow-pink-500/60 transition"
                 >
-                  {it.icon}
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
+                  Explore Products
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition" />
+                </Link>
+
+                <a
+                  href="#about"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-bold hover:bg-white/20 transition"
+                >
+                  Learn More
+                </a>
+              </div>
+
+              <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
+                {[
+                  { v: "40+", l: "Years Exp" },
+                  { v: "5K+", l: "Clients" },
+                  { v: "98%", l: "Quality" },
+                ].map((s) => (
+                  <div key={s.l}>
+                    <div className="text-3xl md:text-4xl font-black text-white">{s.v}</div>
+                    <div className="text-xs uppercase tracking-widest text-slate-400 mt-1">{s.l}</div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* RIGHT VIDEO */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="w-full flex items-center justify-center"
+            >
+              <div className="relative w-full h-[300px] md:h-[380px] lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl shadow-pink-500/30 border border-white/10">
+
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source src="/images/deepu.MP4" type="video/mp4" />
+                </video>
+
+                {/* Glow Overlay */}
+                <div className="absolute inset-0 pointer-events-none rounded-2xl ring-2 ring-pink-500/30" />
+              </div>
+            </motion.div>
+
+          </div>
+        </section>
 
         <div className="relative border-t border-white/10 bg-black/30 backdrop-blur py-4">
           <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-center gap-x-10 gap-y-2 text-xs uppercase tracking-widest text-slate-400 font-semibold">
@@ -171,38 +172,8 @@ export default function Home() {
       {/* ABOUT */}
       <section id="about" className="py-20">
         <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
-            <div className="aspect-[4/5] rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-8 relative overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(244,63,94,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(244,63,94,0.4)_1px,transparent_1px)] [background-size:32px_32px]" />
-              <div className="relative h-full flex flex-col justify-between text-white">
-                <div>
-                  <div className="text-pink-400 text-xs uppercase tracking-[0.3em] font-bold">Our Factory</div>
-                  <div className="mt-3 text-3xl md:text-4xl font-black leading-tight">
-                    Built by <br />
-                    Engineers, <br />
-                    <span className="text-pink-400">For Industry.</span>
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/10">
-                    <div className="text-3xl font-black text-pink-400">50K+</div>
-                    <div className="text-xs uppercase tracking-wider text-slate-300">Units / Month</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/10">
-                    <div className="text-3xl font-black text-pink-400">12</div>
-                    <div className="text-xs uppercase tracking-wider text-slate-300">States Served</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-pink-500 to-rose-600 rounded-3xl rotate-12 -z-0 hidden md:block" />
-          </motion.div>
+
+          <img src="/images/ceo.png" alt="Ashish - Tron Technologies" className="w-full h-auto rounded-xl shadow-lg" />
 
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -212,18 +183,20 @@ export default function Home() {
           >
             <div className="text-xs uppercase tracking-[0.3em] text-pink-600 font-bold">About Us</div>
             <h2 className="mt-3 text-3xl md:text-5xl font-black text-slate-900 leading-tight">
-              Four decades of <span className="text-pink-600">industrial precision</span>
+              Tron Technologies:<span className="text-pink-600">Our Story Since 1982</span>
             </h2>
             <p className="mt-6 text-slate-600 leading-relaxed text-lg">
-              Founded in 1982, Tron Technologies has grown into one of India's most reliable manufacturers of industrial steam iron parts, teflon components and rotating hooks. Our products are engineered in our state-of-the-art Mumbai facility using imported raw materials and rigorously tested before dispatch.
+              Tron Technologies was founded in 1982 in Kalkaji, New Delhi, with a single mission — to provide the Indian textile industry with reliable, high-quality sewing machine parts at honest prices.
+
+              Over four decades, we have grown from a small spare parts shop to a trusted manufacturer and wholesaler supplying customers across India and internationally. Our expertise spans Pressure Feet, Sewing Machine Components, Steam Irons, and Micro Switches.
             </p>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              From small textile units to large garment exporters — every Tron product is built to the same exacting standards. Quality, durability, and on-time delivery are non-negotiable for us.
+              Today, we proudly serve thousands of tailors, garment factories, and industrial units — backed by the same commitment to quality that Harsh Sethi built this company on.
             </p>
             <div className="mt-8 grid grid-cols-2 gap-4">
               {[
                 { icon: <Award className="text-pink-600" />, title: "ISO Certified", desc: "9001:2015" },
-                { icon: <Factory className="text-pink-600" />, title: "Own Factory", desc: "Mumbai, India" },
+                { icon: <Factory className="text-pink-600" />, title: "Own Barchan", desc: "New delhi, India" },
                 { icon: <Truck className="text-pink-600" />, title: "Fast Dispatch", desc: "24-48 hours" },
                 { icon: <Headphones className="text-pink-600" />, title: "24/7 Support", desc: "Tech assistance" },
               ].map((f) => (

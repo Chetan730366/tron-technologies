@@ -8,6 +8,8 @@ import {
 export default function About() {
   return (
     <main className="bg-white">
+
+      {/* HERO */}
       <section className="relative bg-slate-950 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(244,63,94,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(244,63,94,0.4)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
         <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-pink-600/30 blur-3xl" />
@@ -27,6 +29,7 @@ export default function About() {
         </div>
       </section>
 
+      {/* OUR STORY */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -67,31 +70,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-14">
-            <div className="text-xs uppercase tracking-[0.3em] text-pink-600 font-bold">What Drives Us</div>
-            <h2 className="mt-3 text-3xl md:text-5xl font-black text-slate-900">Our Mission, Vision & Values</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { icon: <Target size={28} />, title: "Our Mission", text: "To deliver world-class industrial components that empower Indian manufacturers to compete globally with confidence." },
-              { icon: <Lightbulb size={28} />, title: "Our Vision", text: "To be India's most trusted name in industrial steam iron and sewing machine components by 2030." },
-              { icon: <Heart size={28} />, title: "Our Values", text: "Honesty, quality, and customer-first thinking. We treat every order — small or large — with the same care." },
-            ].map((m, i) => (
-              <motion.div key={m.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="bg-white rounded-3xl p-8 border border-slate-100 hover:border-pink-300 hover:shadow-xl hover:shadow-pink-500/10 transition-all">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-600 to-rose-600 text-white flex items-center justify-center shadow-lg shadow-pink-500/30">
-                  {m.icon}
-                </div>
-                <h3 className="mt-5 text-xl font-bold text-slate-900">{m.title}</h3>
-                <p className="mt-2 text-slate-600 leading-relaxed">{m.text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      {/* TIMELINE */}
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-14">
@@ -130,6 +109,7 @@ export default function About() {
         </div>
       </section>
 
+      {/* ACHIEVEMENTS */}
       <section className="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_50%_50%,rgba(244,63,94,0.3),transparent_50%)]" />
         <div className="relative max-w-7xl mx-auto px-4">
@@ -157,6 +137,7 @@ export default function About() {
         </div>
       </section>
 
+      {/* TEAM — no circle, full square photo card */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
@@ -167,10 +148,10 @@ export default function About() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { n: "Harsh Sethi", r: "Founder & CEO", img: "/images/team-harsh.png", bio: "Visionary leader with 40+ years of industrial experience." },
-              { n: "Anju Sethi", r: "Director", img: "/images/team-anju.png", bio: "Heads operations & strategic partnerships." },
-              { n: "Ashish Kumar", r: "Operations Head", img: "/images/team-ashish.png", bio: "Manages production & quality control." },
-              { n: "Chetan Kumar", r: "Tech & Marketing", img: "/images/team-chetan.png", bio: "Leads digital transformation & marketing." },
+              { n: "Harsh Sethi", r: "Founder & CEO", img: "/images/Harsh-Sethi.png", bio: "Visionary leader with 40+ years of industrial experience.", grad: "from-orange-400 to-pink-600" },
+              { n: "Anju Sethi", r: "Director", img: "/images/Anju-Sethi.png", bio: "Heads operations & strategic partnerships.", grad: "from-fuchsia-500 to-pink-600" },
+              { n: "Ashish", r: "Operations Head", img: "/images/Ashish.png", bio: "Manages production & quality control.", grad: "from-rose-500 to-orange-500" },
+              { n: "Chetan", r: "Tech & Marketing", img: "/images/chetan.png", bio: "Leads digital transformation & marketing.", grad: "from-pink-600 to-fuchsia-700" },
             ].map((p, i) => (
               <motion.div
                 key={p.n}
@@ -179,28 +160,31 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 whileHover={{ y: -6 }}
-                className="group bg-white rounded-3xl p-6 text-center border border-slate-100 hover:shadow-2xl hover:shadow-pink-500/15 hover:border-pink-300 transition-all"
+                className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl hover:shadow-pink-500/15 hover:border-pink-300 transition-all"
               >
-                <div className="relative w-32 h-32 md:w-36 md:h-36 mx-auto">
-                  {/* Animated orange/pink blob behind photo */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-orange-400 via-pink-500 to-rose-600 blur-md scale-95 group-hover:scale-100 transition" />
-                  <div className="absolute inset-1 rounded-full overflow-hidden bg-slate-900 ring-4 ring-white shadow-xl">
-                    <img
-                      src={p.img}
-                      alt={p.n}
-                      className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
-                      onError={(e) => {
-                        e.target.style.display = "none";
-                        e.target.parentElement.innerHTML = `<div class="w-full h-full flex items-center justify-center text-white text-3xl font-black bg-gradient-to-br from-pink-500 to-rose-600">${p.n.split(" ").map((x) => x[0]).join("")}</div>`;
-                      }}
-                    />
-                  </div>
+                {/* Square photo — no circle */}
+                <div className={`relative w-full aspect-square bg-gradient-to-br ${p.grad} overflow-hidden`}>
+                  <img
+                    src={p.img}
+                    alt={p.n}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                      e.target.parentElement.innerHTML = `<div class="w-full h-full flex items-center justify-center text-white text-5xl font-black">${p.n.split(" ").map((x) => x[0]).join("")}</div>`;
+                    }}
+                  />
+                  {/* Bottom fade overlay */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
-                <h3 className="mt-4 text-lg font-bold text-slate-900">{p.n}</h3>
-                <div className="text-sm text-pink-600 font-semibold">{p.r}</div>
-                <p className="mt-2 text-xs text-slate-500 leading-relaxed">{p.bio}</p>
-                <div className="mt-3 flex items-center justify-center gap-1 text-xs text-slate-500">
-                  <CheckCircle2 size={12} className="text-emerald-500" /> Verified
+
+                {/* Info */}
+                <div className="p-5 text-center">
+                  <h3 className="text-lg font-bold text-slate-900">{p.n}</h3>
+                  <div className="text-sm text-pink-600 font-semibold mt-0.5">{p.r}</div>
+                  <p className="mt-2 text-xs text-slate-500 leading-relaxed">{p.bio}</p>
+                  <div className="mt-3 flex items-center justify-center gap-1 text-xs text-slate-500">
+                    <CheckCircle2 size={12} className="text-emerald-500" /> Verified
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -208,6 +192,7 @@ export default function About() {
         </div>
       </section>
 
+      {/* CTA */}
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-4">
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-pink-600 via-rose-600 to-fuchsia-700 p-10 md:p-14 text-white shadow-2xl shadow-pink-500/30 text-center">
@@ -222,6 +207,7 @@ export default function About() {
           </div>
         </div>
       </section>
+
     </main>
   );
 }

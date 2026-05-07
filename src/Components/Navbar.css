@@ -198,27 +198,3 @@
   height: 3px;
   background: white;
 }
-
-/* "NEW" badge for new categories */
-.tron-catbar-new {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.tron-catbar-new-badge {
-  display: inline-block;
-  padding: 2px 7px;
-  border-radius: 9999px;
-  background: linear-gradient(90deg, #facc15, #f97316);
-  color: #1f2937;
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  box-shadow: 0 2px 6px rgba(249, 115, 22, 0.5);
-  animation: newPulse 1.6s ease-in-out infinite;
-}
-@keyframes newPulse {
-  0%, 100% { transform: scale(1); box-shadow: 0 2px 6px rgba(249, 115, 22, 0.5); }
-  50% { transform: scale(1.1); box-shadow: 0 4px 14px rgba(249, 115, 22, 0.8); }
-}

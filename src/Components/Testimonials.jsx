@@ -3,7 +3,7 @@ import { Quote, Star, Building2, Scissors, Store, Factory } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Harsh Sethi",
+    name: "Rahul",
     role: "Sewing Machine Repair Specialist",
     text:
       "Tron Technologies has been my go-to supplier for sewing machine parts for over a decade. Their quality is unmatched, and their attention to detail is evident in every component. Whether I need a basic part or a specialized component, Tron Technologies always delivers. Their customer service is exceptional — prompt responses and reliable support make working with them a pleasure. Highly recommended!",

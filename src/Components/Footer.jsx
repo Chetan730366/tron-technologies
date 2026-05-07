@@ -1,19 +1,15 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { categories } from "../data/categories.js";
+import { categories } from "../data/categories";
 import "./Footer.css";
 
 export default function Footer() {
   return (
     <footer className="tron-footer">
       <div className="tron-footer-grid">
-        <div className="tron-footer-section">
+        <div>
           <Link to="/" className="tron-footer-brand" aria-label="Tron Technologies">
-            <img
-              src="/images/logo.png"
-              alt="Tron Technologies"
-              style={{ width: "150px", height: "auto", display: "block" }}
-            />
+            <img src="/images/logo-tron.png" alt="Tron Technologies — Connecting Technology" className="tron-footer-brand-img" />
           </Link>
           <p className="tron-footer-desc">
             Manufacturer of Teflon Shoe & Gravity Feed Industrial Bottle Iron
@@ -27,15 +23,11 @@ export default function Footer() {
         <div>
           <h4 className="tron-footer-h4">Categories</h4>
           <ul className="tron-footer-list">
-            {categories && categories.length > 0 ? (
-              categories.map((c) => (
-                <li key={c.id}>
-                  <Link to={`/category/${c.id}`}>{c.name}</Link>
-                </li>
-              ))
-            ) : (
-              <li>Loading categories...</li>
-            )}
+            {categories.map((c) => (
+              <li key={c.id}>
+                <Link to={`/category/${c.id}`}>{c.name}</Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -55,7 +47,7 @@ export default function Footer() {
           <div className="tron-footer-contact">
             <div className="tron-footer-contact-row">
               <MapPin size={16} />
-              <span>1636/14, Ground Floor, Govind Puri, Kalka Ji, New Delhi - 110019</span>
+              <span>1636/14, Ground Floor, Govind Puri, Kalka Ji, Near Hanuman Mandir, New Delhi - 110019</span>
             </div>
             <div className="tron-footer-contact-row">
               <Phone size={16} />
@@ -66,9 +58,7 @@ export default function Footer() {
             </div>
             <div className="tron-footer-contact-row">
               <Mail size={16} />
-              <a href="mailto:trontechnologies.in@gmail.com" style={{ wordBreak: "break-all" }}>
-                trontechnologies.in@gmail.com
-              </a>
+              <a href="mailto:trontechnologies.in@gmail.com" style={{ wordBreak: "break-all" }}>trontechnologies.in@gmail.com</a>
             </div>
           </div>
         </div>

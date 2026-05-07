@@ -49,7 +49,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { icon: <Phone size={22} />, title: "Mobile", v: "+91 93159 74174", link: "tel:+919315974174", c: "from-pink-500 to-rose-600" },
-            { icon: <MessageCircle size={22} />, title: "WhatsApp", v: "+91 93159 74174", link: "https://wa.me/919315974174", c: "from-emerald-500 to-green-600" },
+            { icon: <MessageCircle size={22} />, title: "WhatsApp", v: "+91 84487 73299", link: "https://wa.me/918448773299", c: "from-emerald-500 to-green-600" },
             { icon: <Mail size={22} />, title: "Email Us", v: "trontechnologies.in@gmail.com", link: "mailto:trontechnologies.in@gmail.com", c: "from-fuchsia-500 to-pink-600" },
             { icon: <MapPin size={22} />, title: "Visit Us", v: "Govind Puri, New Delhi", link: "#map", c: "from-rose-500 to-red-600" },
           ].map((c, i) => (

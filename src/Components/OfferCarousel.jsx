@@ -8,7 +8,7 @@ const offers = [
     tag: "Today's Deal",
     title: "Industrial Bottle Steam Iron",
     desc: "Heavy-duty professional steam iron with built-in water bottle. Built for non-stop factory use with quick heating and durable teflon sole-plate.",
-    image: "/images/offer-iron.jpg",
+    image: "images/HAY1-9300L-GOLD.jpeg",
     fallbackEmoji: "🧺",
     mrp: 4999,
     price: 2999,
@@ -22,7 +22,7 @@ const offers = [
     tag: "Best Seller",
     title: "Premium Teflon Shoe",
     desc: "Scratch-free, smooth-glide teflon shoe attachment. Compatible with all major industrial steam iron models. Heat-resistant up to 250°C.",
-    image: "/images/offer-teflon.jpg",
+    image: "/images/HAY1-9999-PRO.png",
     fallbackEmoji: "🥾",
     mrp: 1299,
     price: 799,
@@ -36,7 +36,7 @@ const offers = [
     tag: "Limited Stock",
     title: "Precision Rotating Hook",
     desc: "Industrial-grade rotating hook for high-speed sewing machines. CNC-machined for perfect tolerance and ultra-long life. OEM quality at factory prices.",
-    image: "/images/offer-rotating.jpg",
+    image: "/images/SS1-300-GRAVITY.png",
     fallbackEmoji: "⚙️",
     mrp: 2499,
     price: 1499,
@@ -169,7 +169,7 @@ export default function OfferCarousel() {
                         <ShoppingBag size={16} /> {o.cta}
                       </Link>
                       <a
-                        href={`https://wa.me/919315974174?text=${waMsg}`}
+                        href={`https://wa.me/918448773299?text=${waMsg}`}
                         target="_blank"
                         rel="noreferrer"
                         className="offer-btn-secondary"
