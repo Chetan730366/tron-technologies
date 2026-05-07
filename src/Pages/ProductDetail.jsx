@@ -6,9 +6,9 @@ import {
   getProductsForCategory,
   getFullProductById,
 } from "../data/categories.js";
-import ProductCard from "../Components/ProductCard";
+import ProductCard from "../components/ProductCard";
+import InquiryModal from "../components/InquiryModal";
 
-import InquiryModal from "../Components/InquiryModal";
 import {
   ChevronRight, Home, Star, MessageCircle, FileText, Truck,
   ShieldCheck, RotateCcw, Award, Check, Minus, Plus, Share2, Heart, Phone,
@@ -143,8 +143,8 @@ export default function ProductDetail() {
                     key={i}
                     onClick={() => setActiveImg(i)}
                     className={`aspect-square rounded-xl overflow-hidden border-2 transition ${i === activeImg
-                        ? "border-pink-600 ring-2 ring-pink-200"
-                        : "border-slate-200 hover:border-pink-300"
+                      ? "border-pink-600 ring-2 ring-pink-200"
+                      : "border-slate-200 hover:border-pink-300"
                       }`}
                   >
                     <img
@@ -313,8 +313,8 @@ export default function ProductDetail() {
                 key={key}
                 onClick={() => setActiveTab(key)}
                 className={`px-6 py-4 text-sm font-bold uppercase tracking-wider whitespace-nowrap transition relative ${activeTab === key
-                    ? "text-pink-600"
-                    : "text-slate-500 hover:text-slate-900"
+                  ? "text-pink-600"
+                  : "text-slate-500 hover:text-slate-900"
                   }`}
               >
                 {label}
