@@ -6,8 +6,9 @@ import {
   getProductsForCategory,
   getFullProductById,
 } from "../data/categories.js";
-import ProductCard from "../components/ProductCard";
-import InquiryModal from "../components/InquiryModal";
+import ProductCard from "../Components/ProductCard";
+
+import InquiryModal from "../Components/InquiryModal";
 import {
   ChevronRight, Home, Star, MessageCircle, FileText, Truck,
   ShieldCheck, RotateCcw, Award, Check, Minus, Plus, Share2, Heart, Phone,
@@ -43,27 +44,27 @@ export default function ProductDetail() {
     fullProduct?.specs && fullProduct.specs.length > 0
       ? fullProduct.specs
       : [
-          ["SKU / Model", product.sku],
-          ["Category", category.name],
-          ["Material", "Industrial-grade Aluminum / Teflon"],
-          ["Operating Voltage", "220V – 240V AC"],
-          ["Warranty", "12 Months Manufacturer Warranty"],
-          ["Country of Origin", "India"],
-          ["Min. Order Qty", "1 Unit"],
-          ["Packaging", "Bubble-wrapped corrugated box"],
-        ];
+        ["SKU / Model", product.sku],
+        ["Category", category.name],
+        ["Material", "Industrial-grade Aluminum / Teflon"],
+        ["Operating Voltage", "220V – 240V AC"],
+        ["Warranty", "12 Months Manufacturer Warranty"],
+        ["Country of Origin", "India"],
+        ["Min. Order Qty", "1 Unit"],
+        ["Packaging", "Bubble-wrapped corrugated box"],
+      ];
 
   // ✅ FIX 4: Real features from fullProduct
   const features =
     fullProduct?.features && fullProduct.features.length > 0
       ? fullProduct.features
       : [
-          "Heavy-duty industrial build for 24/7 operation",
-          "Corrosion-resistant coating for long life",
-          "Compatible with all leading factory machinery",
-          "Tested & QC approved before dispatch",
-          "Easy installation — plug & play",
-        ];
+        "Heavy-duty industrial build for 24/7 operation",
+        "Corrosion-resistant coating for long life",
+        "Compatible with all leading factory machinery",
+        "Tested & QC approved before dispatch",
+        "Easy installation — plug & play",
+      ];
 
   // ✅ FIX 5: Real description from fullProduct
   const description =
@@ -141,11 +142,10 @@ export default function ProductDetail() {
                   <button
                     key={i}
                     onClick={() => setActiveImg(i)}
-                    className={`aspect-square rounded-xl overflow-hidden border-2 transition ${
-                      i === activeImg
+                    className={`aspect-square rounded-xl overflow-hidden border-2 transition ${i === activeImg
                         ? "border-pink-600 ring-2 ring-pink-200"
                         : "border-slate-200 hover:border-pink-300"
-                    }`}
+                      }`}
                   >
                     <img
                       src={g}
@@ -312,11 +312,10 @@ export default function ProductDetail() {
               <button
                 key={key}
                 onClick={() => setActiveTab(key)}
-                className={`px-6 py-4 text-sm font-bold uppercase tracking-wider whitespace-nowrap transition relative ${
-                  activeTab === key
+                className={`px-6 py-4 text-sm font-bold uppercase tracking-wider whitespace-nowrap transition relative ${activeTab === key
                     ? "text-pink-600"
                     : "text-slate-500 hover:text-slate-900"
-                }`}
+                  }`}
               >
                 {label}
                 {activeTab === key && (
