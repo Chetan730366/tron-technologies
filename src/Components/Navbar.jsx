@@ -1,7 +1,7 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import { categories, getProductsForCategory } from "../data/Categories";
+import { categories, getProductsForCategory } from "../data/categories.js";
 import "./Navbar.css";
 
 export default function Navbar() {
