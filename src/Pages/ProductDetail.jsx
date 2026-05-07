@@ -5,7 +5,7 @@ import {
   categories,
   getProductsForCategory,
   getFullProductById,
-} from "../data/categories";
+} from "../data/Categories";
 import ProductCard from "../components/ProductCard";
 import InquiryModal from "../components/InquiryModal";
 import {
