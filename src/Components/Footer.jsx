@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { categories } from "../data/categories";
+import { categories } from "../data/categories.js";
 import "./Footer.css";
 
 export default function Footer() {
